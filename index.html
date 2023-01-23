@@ -1,1 +1,33 @@
+<html>
+<head><title>Merry Christmas wish</title>
+      <link href="style.css" rel="stylesheet" >
+      <meta name="Viewport" content="Width=device-width, initial-scale=1.0" >
+</head>
+<body>
+<div class="textwaro" >
+      <div class="fixed" >I am </div>
+      <div class="typ" >Devloper</div>
+</div>
 
+<div class="pop" >
+    <text>SOMYA</text>   
+</div>
+
+<form class="TXT" action="second.html" >
+<input type="text"  id="name"  >
+<input type="submit" value="click" onclick="changename()" >
+</form>
+
+
+</body>
+
+  <script type="text/javascript">
+     
+     function changename(){
+       var NAME = document.getElementById("name").value;
+       localStorage.setItem("textvalue",NAME);
+        return false;
+     }
+     
+  </script>
+</html>
