@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+<style type="text/css">
+.sbtn {
+   width:300px;
+   padding:10px 5px;
+   font-size:30px;
+   background:green;
+   outline:none;
+   text-decoration:none;
+   border-radius:10px;
+   color:white;
+   font-weight:bolder;
+}
+#see {
+ font-size:30px;
+ color:red;
+ text-transform:capitalize;
+}
+</style>
+</head>
+<body>
+
+<audio src="RepublicDay.mp3" autoplay="autoplay" ></audio>
+
+
+<center><h1>2nd page</h1>
+
+<h3>Wellcom <span id="see" ></span> !!!  </h3>
+
+     <a href="whatsapp://send?text=https://flaskjob.com/e/?n="><button class="sbtn" oncanplay="send()">Share this link</button>
+     </a>
+</center>
+</body>
+<script type="text/javascript">
+
+ document.getElementById("see").innerHTML = localStorage.getItem("textvalue");
+
+</script>
+</html>
