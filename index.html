@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head><title>Show Data</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+ <style type="text/css">
+   body {
+    margin:0;
+    padding:0;
+    background:linear-gradient(to bottom left, skyblue,  blue);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+   }
+   form {
+       background:blue;
+       text-align:center;
+       padding:5px 15px;
+       position:absolute;
+       top:30%;
+       border-radius:15px;
+       box-shadow:5px 5px 5px white, -5px -5px 5px skyblue;
+   }
+   #txt {
+       font-size:25px;
+       font-family:fantasy;
+       font-weight:bolder;
+       margin-bottom:15px;
+       padding:5px 0px 5px 10px;
+   }
+   #bbb {
+       width:100%;
+       margin-bottom:15px;
+       font-size:25px;
+       border:none;
+       border-radius:25px;
+       padding:5px 0px;
+       background:green;
+       color:white;
+       font-weight:bold;
+   }
+   #bbb:hover {
+     background:yellow;
+     color:black;
+   }
+   form h3{
+      border-bottom:2px solid white;
+      padding-bottom:5px;
+      font-size:25px;
+      color:yellow;
+      text-shadow: 0px 0px 15px red;
+   }
+   .head p{
+       font-size:35px;
+       font-weight:bolder;
+   }
+.head p span {
+     font-size:45px;
+     font-weight:bolder;
+     color:red;
+ }
+ </style>
+</head>
+<body>
+      <div class="head" >
+          <p>Hello <span id="show" >TXT</span></p>          
+      </div>
+
+  <form action="new.html" >
+     <h3>Enter your name ! </h3>
+   <input type="text" id="txt"><br>
+   <input type="submit" onclick="Click()" id="bbb" >
+  </form>
+</body>
+  <script type="text/javascript">
+  function Click(){
+      var NAME = document.getElementById("txt").value;
+       localStorage.setItem("textvalue",NAME);
+      return flase;
+    };
+    
+    
+   document.getElementById("show").innerHTML = localStorage.getItem("textvalue");
+  </script>
+</html>
